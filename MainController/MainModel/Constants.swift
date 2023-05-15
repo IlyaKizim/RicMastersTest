@@ -21,4 +21,11 @@ enum Constants {
     static let save = "Save"
     static let main = "Main"
     static let secondViewController = "SeconViewController"
+    static let titleNavigation = "Домофон общедомовой"
+    static let shevron = "chevron.compact.up"
+    static let arrow = "arrow.left"
+    static let set = "Настройки"
+    static let eye = "eye.slash"
+    static let key = "key.fill"
+    static let openDoor = "Открыть дверь"
 }

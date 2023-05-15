@@ -34,7 +34,7 @@ class SecondViewController: UIViewController {
         if let font = UIFont(name: Constants.font, size: 21) {
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
         }
-        navigationItem.title = "Домофон общедомовой"
+        navigationItem.title = Constants.titleNavigation
         navigationItem.setHidesBackButton(true, animated: true)
         conteinerView.layer.cornerRadius = 12
         conteinerView.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
@@ -43,15 +43,15 @@ class SecondViewController: UIViewController {
 //MARK: -  setupUI
     
     private func configurateToolBar() {
-        image.image = UIImage(systemName: "chevron.compact.up")
+        image.image = UIImage(systemName: Constants.shevron)
         image.tintColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
         let leftButton = UIButton(type: .system)
         leftButton.contentHorizontalAlignment = .center
         leftButton.tintColor = UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)
-        leftButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        leftButton.setImage(UIImage(systemName: Constants.arrow), for: .normal)
         leftButton.addTarget(self, action: #selector(popToRoot), for: .touchUpInside)
         let centerButton = UIButton(type: .system)
-        centerButton.setTitle("Настройки", for: .normal)
+        centerButton.setTitle(Constants.set, for: .normal)
         centerButton.setTitleColor(UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1), for: .normal)
         centerButton.titleLabel?.font = UIFont(name: Constants.font, size: 17)
         centerButton.contentHorizontalAlignment = .center
@@ -59,7 +59,7 @@ class SecondViewController: UIViewController {
         centerButton.addTarget(self, action: #selector(centerButtonTapped), for: .touchUpInside)
         let rightButton = UIButton(type: .system)
         rightButton.contentHorizontalAlignment = .center
-        rightButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        rightButton.setImage(UIImage(systemName: Constants.eye), for: .normal)
         rightButton.setTitleColor(UIColor(red: 3/255, green: 169/255, blue: 244/255, alpha: 1), for: .normal)
         rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         let centerBarButtonItem = UIBarButtonItem(customView: centerButton)
@@ -78,8 +78,8 @@ class SecondViewController: UIViewController {
     func configurLock() {
         conteinerView.backgroundColor = .white
         imageViewLock.tintColor = UIColor(red: 3/255, green: 169/255, blue: 244/255, alpha: 1)
-        imageViewLock.image = UIImage(systemName: "key.fill")
-        labelLock.text = "Открыть дверь"
+        imageViewLock.image = UIImage(systemName: Constants.key)
+        labelLock.text = Constants.openDoor
         labelLock.font = UIFont(name: Constants.font, size: 14)
         labelLock.tintColor = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
         imageViewLock.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
