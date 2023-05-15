@@ -1,11 +1,11 @@
 # RicMastersTest
 
 ## Frameworks and technologies:
--UIKit
--Realm
--MVC
--WebKit
--API
+- UIKit
+- Realm
+- MVC
+- WebKit
+- API
 
 ## Screenshots
 <div>
